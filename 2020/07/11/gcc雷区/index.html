@@ -19,22 +19,21 @@
     var CONFIG = {"hostname":"zeroing.tk","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="漫长的等待。">
+  <meta name="description" content="一盆冷水迎面打来，都差点不想要Win10了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="论Python有多慢">
-<meta property="og:url" content="https://zeroing.tk/2020/06/08/%E8%AE%BAPython%E6%9C%89%E5%A4%9A%E6%85%A2/index.html">
+<meta property="og:title" content="gcc雷区">
+<meta property="og:url" content="https://zeroing.tk/2020/07/11/gcc%E9%9B%B7%E5%8C%BA/index.html">
 <meta property="og:site_name" content="Zeroing">
-<meta property="og:description" content="漫长的等待。">
+<meta property="og:description" content="一盆冷水迎面打来，都差点不想要Win10了。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-08T04:41:10.000Z">
-<meta property="article:modified_time" content="2020-06-10T16:00:26.927Z">
+<meta property="article:published_time" content="2020-07-11T12:36:56.000Z">
+<meta property="article:modified_time" content="2020-07-11T12:52:55.205Z">
 <meta property="article:author" content="Meaty❤️Beiby">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="matplotlib">
-<meta property="article:tag" content="idle">
+<meta property="article:tag" content="GCC">
+<meta property="article:tag" content="MinGW">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://zeroing.tk/2020/06/08/%E8%AE%BAPython%E6%9C%89%E5%A4%9A%E6%85%A2/">
+<link rel="canonical" href="https://zeroing.tk/2020/07/11/gcc%E9%9B%B7%E5%8C%BA/">
 
 
 <script id="page-configurations">
@@ -47,7 +46,7 @@
   };
 </script>
 
-  <title>论Python有多慢 | Zeroing</title>
+  <title>gcc雷区 | Zeroing</title>
   
 
 
@@ -158,7 +157,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zeroing.tk/2020/06/08/%E8%AE%BAPython%E6%9C%89%E5%A4%9A%E6%85%A2/">
+    <link itemprop="mainEntityOfPage" href="https://zeroing.tk/2020/07/11/gcc%E9%9B%B7%E5%8C%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -171,7 +170,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          论Python有多慢
+          gcc雷区
         </h1>
 
         <div class="post-meta">
@@ -180,16 +179,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-06-08 12:41:10" itemprop="dateCreated datePublished" datetime="2020-06-08T12:41:10+08:00">2020-06-08</time>
+              <time title="创建时间：2020-07-11 20:36:56 / 修改时间：20:52:55" itemprop="dateCreated datePublished" datetime="2020-07-11T20:36:56+08:00">2020-07-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-11 00:00:26" itemprop="dateModified" datetime="2020-06-11T00:00:26+08:00">2020-06-11</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -201,7 +194,7 @@
             </span>
 
           
-            <div class="post-description">漫长的等待。</div>
+            <div class="post-description">一盆冷水迎面打来，都差点不想要Win10了。</div>
 
         </div>
       </header>
@@ -212,9 +205,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Python简单归简单，实在是太太太太耗内存了，数据一大就不行了。以后做大数据的时候，还是能用Java/Spark就用吧，速度是硬伤，不会还是要好好学。:(<br>在Linux终端下使用matplotlib，数据一大，运行就越来越慢慢慢慢慢，忍不了了，果然没有好馅饼，简单是简单，慢更慢了，和IDLE有的一拼。<br>论什么时候才会放弃Python迎接Java/Spark。</p>
-<hr>
-<p>是我憨憨了，根据网上大神的说法，尽量减少plt.scatter/plot之类的这种函数的调用，就不会出那样的问题，学的还是太少了。</p>
+        <p>第一，使用notepad++的时候下载那个installer，方便插件和汉化；第二，在win10没修好bug的情况下不要使用MinGW，用GCC一样可以；第三，使用notepad++的话编译运行使用命令<code>cmd /k gcc -o &quot;$(CURRENT_DIRECTORY)\$(NAME_PART).exe&quot; &quot;$(FULL_CURRENT_PATH)&quot; &amp; &quot;$(CURRENT_DIRECTORY)\$(NAME_PART).exe&quot; &amp; pause &amp; exit</code>运行。</p>
 
     </div>
 
@@ -224,9 +215,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"># Python</a>
-              <a href="/tags/matplotlib/" rel="tag"># matplotlib</a>
-              <a href="/tags/idle/" rel="tag"># idle</a>
+              <a href="/tags/GCC/" rel="tag"># GCC</a>
+              <a href="/tags/MinGW/" rel="tag"># MinGW</a>
           </div>
 
         
@@ -235,12 +225,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/07/%E6%B0%B8%E8%BF%9C%E5%A4%B1%E5%8E%BB%E4%BA%86%E7%8C%AA%E7%AA%9D/" rel="prev" title="永远失去了猪窝">
-      <i class="fa fa-chevron-left"></i> 永远失去了猪窝
+    <a href="/2020/07/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93/" rel="prev" title="计算机网络总结">
+      <i class="fa fa-chevron-left"></i> 计算机网络总结
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/06/10/C%E8%AF%AD%E8%A8%80%E5%87%86%E5%A4%87%E5%B0%B1%E7%BB%AA%EF%BC%81/" rel="next" title="C语言准备就绪！">
-      C语言准备就绪！ <i class="fa fa-chevron-right"></i>
+    <a href="/2020/07/11/C%E4%B8%AD%E7%BB%93%E6%9E%84%E4%BD%93%E5%88%9B%E5%BB%BA/" rel="next" title="C中结构体创建">
+      C中结构体创建 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
