@@ -204,7 +204,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>get_ip.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">net=192.168.0.</span><br><span class="line"></span><br><span class="line">get_ip()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> &#123;1..254&#125;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">		timeout 1 ping <span class="variable">$&#123;net&#125;</span><span class="variable">$&#123;i&#125;</span> -c 1 &amp;</span><br><span class="line">	<span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line">get_ip | grep ttl | grep -o <span class="variable">$net</span>[0-9]*</span><br></pre></td></tr></table></figure><br>记录一下遇到的两个问题，1是在shell里定义变量时，等号两边不能有空格；2是<code>grep -o</code>可以用正则表达式只输出想要的内容。</p>
+        <p>get_ip.sh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">net=192.168.0.</span><br><span class="line"></span><br><span class="line">get_ip()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> &#123;1..254&#125;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">		timeout 1 ping <span class="variable">$&#123;net&#125;</span><span class="variable">$&#123;i&#125;</span> -c 1 &amp;</span><br><span class="line">	<span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line">get_ip | grep ttl | grep -o <span class="variable">$net</span>[0-9]*</span><br></pre></td></tr></table></figure>
+<p>记录一下遇到的两个问题，1是在shell里定义变量时，等号两边不能有空格；2是<code>grep -o</code>可以用正则表达式只输出想要的内容。</p>
 
     </div>
 
@@ -302,7 +304,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -315,7 +317,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
