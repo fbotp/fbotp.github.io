@@ -205,11 +205,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>第一，用源码形式安装nginx时，缺两个库，PCRE和OPENSSL，分别用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install libpcre3-dev</span><br><span class="line">sudo apt install libssl-dev</span><br><span class="line">(libssl-dev会报错，因为libssl版本太新了，用sudo apt install libssl=版本号 的方式安装)</span><br></pre></td></tr></table></figure>
-<p>第二，还是用源码安装的nginx，要开机自启，参考<a href="https://www.nginx.com/resources/wiki/start/topics/examples/initscripts/" target="_blank" rel="noopener">nginx官方文档</a>写个nginx放到/etc/init.d/下，并+x，并</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> nginx</span><br></pre></td></tr></table></figure>
-<p>设为开机启动<br>第三，php-fpm安装完后，去nginx.conf修改<code>user www-data;</code>在下方的<code>fastcgi_pass</code>改为对应的<code>/run/php/phpx.x-fpm.sock</code>，并将include改为fastcgi.conf。<br>完结撒花。</p>
+        <p>第一，用源码形式安装nginx时，缺两个库，PCRE和OPENSSL，分别用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install libpcre3-dev</span><br><span class="line">sudo apt install libssl-dev</span><br><span class="line">(libssl-dev会报错，因为libssl版本太新了，用sudo apt install libssl=版本号 的方式安装)</span><br></pre></td></tr></table></figure><br>第二，还是用源码安装的nginx，要开机自启，参考<a href="https://www.nginx.com/resources/wiki/start/topics/examples/initscripts/" target="_blank" rel="noopener">nginx官方文档</a>写个nginx放到/etc/init.d/下，并+x，并<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> nginx</span><br></pre></td></tr></table></figure><br>设为开机启动<br>第三，php-fpm安装完后，去nginx.conf修改<code>user www-data;</code>在下方的<code>fastcgi_pass</code>改为对应的<code>/run/php/phpx.x-fpm.sock</code>，并将include改为fastcgi.conf。<br>完结撒花。</p>
 
     </div>
 
@@ -308,7 +304,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -321,7 +317,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

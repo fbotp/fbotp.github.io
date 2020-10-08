@@ -415,8 +415,8 @@
 <li><strong>CD</strong>：碰撞检测，即边发送边监听，检测信道上的电压变化幅度是否增大，超过一定阈值就认为发生了碰撞(冲突)，在发送的适配器就立即停止发送</li>
 <li>争用期：又称碰撞窗口，$2τ$，其中$τ$为总线的一端到另一端的时延，<strong>一般规定$512bit$时间为争用期</strong></li>
 <li>截断二进制指数退避算法：基本退避时间为$2τ$，从离散的$[0,1,2,3…(2^k-1)]$中随机选一个退避系数$r$，乘以$2τ$即为退避时间。其中$k=Min[重传次数,10]$。当重传次数达到<strong>16</strong>次仍然没成功时，丢弃该帧并向上层报告。</li>
-<li><font color="red"><strong>最短帧长：$512bit$，即$64字节$，是规定！并因此有了规定的争用期</strong></font></li>
-<li><font color="red"><strong>帧间最小间隔：$96bit$时间，也是规定！</strong></font></li>
+<li><font color="red">**最短帧长：$512bit$，即$64字节$，是规定！并因此有了规定的争用期**</font></li>
+<li><font color="red">**帧间最小间隔：$96bit$时间，也是规定！**</font></li>
 <li>强化碰撞：在<strong>发生碰撞且双方都检测到后</strong>，双方会再发送一个$32$~$48bit$的人为干扰信号强化碰撞</li>
 </ul>
 </li>
@@ -557,8 +557,8 @@
 <li>第二个4字节的16-18位：标志，最低为MF=1/0：有无分片，中间位DF=0/1：可否分片(数字与可否相对应)</li>
 <li><strong>第二个4字节的19-31位：片偏移(分片地址/8得到)</strong></li>
 <li>第三个4字节的16-31位：首部校验和(<strong>只计算IP数据报的首部</strong>)：将所有首部的字段相加，该字段按0算，结果取反码写入该字段；校验时，也将所有字段相加取反码，为0则正确</li>
-<li><strong><font color="red">第四个4字节：源地址(与MAC地址的先目的后源不同！！)</strong></font></li>
-<li><strong><font color="red">第五个4字节：目的地址</strong></font></li>
+<li><strong><font color="red">第四个4字节：源地址(与MAC地址的先目的后源不同！！)</strong>&lt;/font&gt;</li>
+<li><strong><font color="red">第五个4字节：目的地址</strong>&lt;/font&gt;</li>
 </ul>
 </li>
 <li>IP分组转发：路由(默认路由，特定路由)，要会算</li>
@@ -698,13 +698,13 @@
 </ul>
 </li>
 <li>拥塞控制：<ul>
-<li>慢开始&amp;拥塞避免：一开始执行：cwnd(拥塞窗口)=1，swnd(发送窗口)=cwnd，ssthresh(慢开始门限)一般取16。每重传成功一个轮次，cwnd<em>2，swnd=cwnd，直到*</em>cwnd≥ssthresh*<em>，此时执行拥塞避免算法，使cwnd从</em>2变为+1，直到发生拥堵时，$sshthresh=cwnd/2$，设置cwnd=1，执行慢开始，循环进行</li>
+<li>慢开始&amp;拥塞避免：一开始执行：cwnd(拥塞窗口)=1，swnd(发送窗口)=cwnd，ssthresh(慢开始门限)一般取16。每重传成功一个轮次，cwnd<em>2，swnd=cwnd，直到<strong>cwnd≥ssthresh</strong>，此时执行拥塞避免算法，使cwnd从</em>2变为+1，直到发生拥堵时，$sshthresh=cwnd/2$，设置cwnd=1，执行慢开始，循环进行</li>
 <li>快重传，快恢复：要求接收方收到一个报文立即发送ack，若收到了对同一个报文的<strong>3次重复确认</strong>，则认为发生了拥堵，执行快恢复：$sshthresh=cwnd/2$，cwnd=ssthresh，并开始执行拥塞避免方法</li>
 </ul>
 </li>
-<li>三次握手：<br><img src="/img/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.png" alt=""></li>
+<li>三次握手：<br><img src="/img/三次握手.png" alt=""></li>
 <li>建立后所有的数据传输都要置ACK=1，且最后一次确认可以携带数据</li>
-<li>四次握手释放：<br><img src="/img/%E5%9B%9B%E6%AC%A1%E6%8F%A1%E6%89%8B.png" alt=""> </li>
+<li>四次握手释放：<br><img src="/img/四次握手.png" alt=""> </li>
 </ul>
 </li>
 </ul>
@@ -872,7 +872,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -885,7 +885,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
