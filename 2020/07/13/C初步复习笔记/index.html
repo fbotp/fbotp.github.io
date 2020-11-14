@@ -27,7 +27,7 @@
 <meta property="og:description" content="完结撒花。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-13T01:38:22.000Z">
-<meta property="article:modified_time" content="2020-07-14T14:30:31.061Z">
+<meta property="article:modified_time" content="2020-11-14T14:24:57.423Z">
 <meta property="article:author" content="Meaty❤️Beiby">
 <meta property="article:tag" content="C&#x2F;C++">
 <meta name="twitter:card" content="summary">
@@ -186,7 +186,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-14 22:30:31" itemprop="dateModified" datetime="2020-07-14T22:30:31+08:00">2020-07-14</time>
+                <time title="修改时间：2020-11-14 22:24:57" itemprop="dateModified" datetime="2020-11-14T22:24:57+08:00">2020-11-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -214,7 +214,6 @@
 <p>typedef将struct test定义为test，即写的简略<br>初始化时可以 test t={.a=0}对a进行初始化<br>结构体数组：struct test xxx[]={}，类似二维数组赋值<br>结构体指针(*p).num==p-&gt;num</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">printf(&quot;%lf\n&quot;, 1.0&#x2F;5);</span><br><span class="line">printf(&quot;%d %d %d\n&quot;, 10, 011, 0x11);</span><br></pre></td></tr></table></figure>
 <p>长整型L，4字节，短整型&amp;基本型，2字节，u，无符号数，现在int也4字节了，最大能到2147483647</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span> <span class="number">-8</span>++ :<span class="number">-8</span>    结果<span class="number">9</span>  ！！！不要弄错</span><br><span class="line"><span class="built_in">printf</span> <span class="number">-9</span>++ :<span class="number">-9</span>  最后数结果为<span class="number">10</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">5</span>,j=<span class="number">5</span>,p,q;</span><br><span class="line">p=(i++)+(i++)+(i++);</span><br><span class="line">q=(++j)+(++j)+(++j);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d,%d,%d,%d"</span>,p,q,i,j);   ！！ <span class="number">18</span> <span class="number">22</span> <span class="number">8</span> <span class="number">8</span>，但答案是<span class="number">15</span>，<span class="number">24</span>，<span class="number">8</span>，<span class="number">8</span></span><br><span class="line">对 P=(i++)+(i++)+(i++)应理解为三个 i 相加，故 P 值为 <span class="number">15</span>。然后 i 再自增 <span class="number">1</span> 三次相当于加 <span class="number">3</span></span><br><span class="line">故 i 的最后值为 <span class="number">8</span>。而对于 q 的值则不然，q=(++j)+(++j)+(++j)应理解为 q 先自增 <span class="number">1</span>，再参与运算，由于 q 自增 <span class="number">1</span> 三次后值为 <span class="number">8</span>，三个 <span class="number">8</span> 相加的和为 <span class="number">24</span>，j 的最后值仍为 <span class="number">8</span>。</span><br><span class="line"><span class="string">"！！！！！！！！！有疑问！！！！！！！！！！！！！！"</span></span><br><span class="line">个人理解：由于加号的左结合性，而且和i++不同，<span class="number">1</span>号位和<span class="number">2</span>号位的(++j)先运行，使j变成<span class="number">7</span>后两两相加，最后再来三号位的j，所以是p=<span class="number">5</span>+<span class="number">6</span>+<span class="number">7</span>=<span class="number">18</span>,q=<span class="number">7</span>+<span class="number">7</span>+<span class="number">8</span>=<span class="number">22</span></span><br></pre></td></tr></table></figure>
 <p>一般而言，单目运算符优先级较高，赋值运算符优先级低。算术运算符优先级较高，关系和逻辑运算符优先级较低。多数运算符具有左结合性，单目运算符、三目运算符、赋值运算符具有右结合性。<br>优先级关系<br>! &gt; &amp; &gt; ^ &gt; | &gt; &amp;&amp; &gt; ||</p>
 <hr>
