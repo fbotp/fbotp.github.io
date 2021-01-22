@@ -204,37 +204,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><table>
+        <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="center">类型</th>
-<th align="center">short int</th>
-<th align="center">int</th>
-<th align="center">long int</th>
-<th align="center">long long int</th>
-<th align="center">char</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">short int</th>
+<th style="text-align:center">int</th>
+<th style="text-align:center">long int</th>
+<th style="text-align:center">long long int</th>
+<th style="text-align:center">char</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">长度/字节</td>
-<td align="center">2</td>
-<td align="center">2/4</td>
-<td align="center">4</td>
-<td align="center">8</td>
-<td align="center">1</td>
+<tbody>
+<tr>
+<td style="text-align:center">长度/字节</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2/4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1</td>
 </tr>
-</tbody></table>
-<p>还有float double complex<br><code>%m.nf</code>：包括负号、整数部分、小数点、小数部分总长m，小数部分长n<br><code>%m.ne</code>：包括负号、整数部分、+/-e、指数部分长共m，指数部分长n<br><code>%g</code>：从<code>%f %e</code>中挑一个短的输出<br><code>printf()</code>中%E %X %G可大写，对应的E、X大写，其他均不可<br>要输出%时要<code>printf(%%)</code></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a = <span class="string">'\101'</span>;	<span class="comment">//转为八进制对应的十进制，赋给a</span></span><br><span class="line"><span class="keyword">char</span> a = <span class="string">'\x11'</span>;	<span class="comment">//转为16进制对应的十进制，赋给a</span></span><br><span class="line">char a = '10';	   //非法</span><br><span class="line"><span class="keyword">char</span> a = <span class="number">10</span>;	   <span class="comment">//合法</span></span><br></pre></td></tr></table></figure>
-<p><strong>使用<code>getchar()</code>可以获得类似回车换行之类的无法在屏幕上显示的字符</strong></p>
+</tbody>
+</table>
+</div>
+<p>还有float double complex<br><code>%m.nf</code>：包括负号、整数部分、小数点、小数部分总长m，小数部分长n<br><code>%m.ne</code>：包括负号、整数部分、+/-e、指数部分长共m，指数部分长n<br><code>%g</code>：从<code>%f %e</code>中挑一个短的输出<br><code>printf()</code>中%E %X %G可大写，对应的E、X大写，其他均不可<br>要输出%时要<code>printf(%%)</code><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a = <span class="string">'\101'</span>;	<span class="comment">//转为八进制对应的十进制，赋给a</span></span><br><span class="line"><span class="keyword">char</span> a = <span class="string">'\x11'</span>;	<span class="comment">//转为16进制对应的十进制，赋给a</span></span><br><span class="line">char a = '10';	   //非法</span><br><span class="line"><span class="keyword">char</span> a = <span class="number">10</span>;	   <span class="comment">//合法</span></span><br></pre></td></tr></table></figure><br><strong>使用<code>getchar()</code>可以获得类似回车换行之类的无法在屏幕上显示的字符</strong></p>
 <hr>
 <h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p><strong><font color="red">关系运算符优先级(从高到低)</font></strong><br>逻辑运算符：与或非(&amp;!|)<br>!-&gt;算数运算符-&gt;关系运算符(大于小于)-&gt;&amp;/|-&gt;条件运算符(if/?)-&gt;赋值运算符<br>例如<br>!a&amp;&amp;b||x&gt;y&amp;&amp;c &lt;==&gt; (!a)&amp;&amp;b||(x&gt;y)&amp;&amp;c<br>bool等价于_Bool</p>
 <hr>
 <h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p><code>do...while();</code>与<code>while()</code>区别就在前者无论while成立不成立都会执行一次</p>
 <hr>
-<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p><code>int a[n];</code>非法<br>对数组初始化 </p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;则全为<span class="number">0</span>，第一个<span class="number">0</span>能省略，即<span class="keyword">int</span> a[<span class="number">10</span>] = &#123;&#125;;</span><br><span class="line"><span class="keyword">int</span> a[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;则默认长度即<span class="number">3</span></span><br><span class="line"><span class="keyword">char</span> a[<span class="number">10</span>] = &#123;<span class="string">'1'</span>, <span class="string">'2'</span>&#125;;则剩余均为<span class="string">'\0'</span></span><br><span class="line"><span class="keyword">char</span> a[] = <span class="string">"12"</span>;也会默认加<span class="string">'\0'</span>，除非指定a的长度，每一位手动赋值</span><br><span class="line">上面这个字符串的数组长度为<span class="number">3</span>，因为有<span class="string">'\0'</span>，但字符串长<span class="number">2</span></span><br></pre></td></tr></table></figure>
-<p><strong><code>scanf(&quot;%s&quot;, a);</code>a即为地址，不要再&amp;，其次是用这个读取时会从空格或回车断开，但<code>gets()</code>不会</strong><br><code>puts()</code>可含转义字符，如<code>\n\r</code><br><code>strcpy(目的，源)</code>，<code>strncp(目的，源，前n个)</code>，<code>strlen(str)</code>即到’\0’为止的长度(不包含’\0’)</p>
+<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p><code>int a[n];</code>非法<br>对数组初始化<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;则全为<span class="number">0</span>，第一个<span class="number">0</span>能省略，即<span class="keyword">int</span> a[<span class="number">10</span>] = &#123;&#125;;</span><br><span class="line"><span class="keyword">int</span> a[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;则默认长度即<span class="number">3</span></span><br><span class="line"><span class="keyword">char</span> a[<span class="number">10</span>] = &#123;<span class="string">'1'</span>, <span class="string">'2'</span>&#125;;则剩余均为<span class="string">'\0'</span></span><br><span class="line"><span class="keyword">char</span> a[] = <span class="string">"12"</span>;也会默认加<span class="string">'\0'</span>，除非指定a的长度，每一位手动赋值</span><br><span class="line">上面这个字符串的数组长度为<span class="number">3</span>，因为有<span class="string">'\0'</span>，但字符串长<span class="number">2</span></span><br></pre></td></tr></table></figure><br><strong><code>scanf(&quot;%s&quot;, a);</code>a即为地址，不要再&amp;，其次是用这个读取时会从空格或回车断开，但<code>gets()</code>不会</strong><br><code>puts()</code>可含转义字符，如<code>\n\r</code><br><code>strcpy(目的，源)</code>，<code>strncp(目的，源，前n个)</code>，<code>strlen(str)</code>即到’\0’为止的长度(不包含’\0’)</p>
 
     </div>
 
