@@ -141,13 +141,15 @@ function timer()
         this.month = date.getMonth() + 1;
 	this.month = this.month < 10 ? "0" + this.month : this.month;
         this.date = date.getDate();
+        this.tomorrow = this.date+1;
+        this.tomorrow = this.tomorrow <10 ? "0" + this.tomorrow : this.tomorrow;
 	this.date = this.date < 10 ? "0" + this.date : this.date;
         this.hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
         this.minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
         this.second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
 	document.getElementsByTagName('p')[4].innerHTML = this.year+'-'+this.month+'-'+this.date+' <span data-v-37e5dc7e="">'+this.hour+':'+this.minute+':'+this.second+'</span>';
         document.getElementsByTagName('p')[2].innerHTML = "开始："+this.year+'-'+this.month+'-'+this.date+' 08:00';
-	document.getElementsByTagName('p')[3].innerHTML = "结束："+this.year+'-'+this.month+'-'+(this.date+1)+' 08:00';
+	document.getElementsByTagName('p')[3].innerHTML = "结束："+this.year+'-'+this.month+'-'+this.tomorrow+' 08:00';
 }
 setInterval(timer, 500);
 var sleep = function(time) {
