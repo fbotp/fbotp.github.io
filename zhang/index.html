@@ -172,7 +172,7 @@ var qrcode = new QRCode(document.getElementsByClassName("qrContainer green")[0],
 });
         var ajaxObj = new XMLHttpRequest();
         ajaxObj.open('post', 'http://noleave.sxu.edu.cn/jcforms/plus/api/getRandom');
-        ajaxObj.setRequestHeader("Referer", "http://noleave.sxu.edu.cn/");
+        ajaxObj.setRequestHeader("Origin", "http://noleave.sxu.edu.cn/");
         ajaxObj.send()
         ajaxObj.onreadystatechange = function () {
             if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
