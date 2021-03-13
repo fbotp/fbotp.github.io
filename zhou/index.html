@@ -148,8 +148,8 @@ function timer()
         this.minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
         this.second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
 	document.getElementsByTagName('p')[4].innerHTML = this.year+'-'+this.month+'-'+this.date+' <span data-v-37e5dc7e="">'+this.hour+':'+this.minute+':'+this.second+'</span>';
-        document.getElementsByTagName('p')[2].innerHTML = "开始："+this.year+'-'+this.month+'-'+this.date+' 07:11';
-	document.getElementsByTagName('p')[3].innerHTML = "结束："+this.year+'-'+this.month+'-'+this.tomorrow+' 21:50';
+        document.getElementsByTagName('p')[2].innerHTML = "开始："+this.year+'-'+this.month+'-'+this.date+' 05:11';
+	document.getElementsByTagName('p')[3].innerHTML = "结束："+this.year+'-'+this.month+'-'+this.tomorrow+' 23:50';
 }
 setInterval(timer, 500);
 var sleep = function(time) {
